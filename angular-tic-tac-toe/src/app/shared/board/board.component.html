@@ -1,7 +1,17 @@
-<div class="board">
-    <div class="table">
-        <div class="tr" *ngFor="let i of numbers">
-          <div class="td" *ngFor=" let j of numbers">{{i}}x{{j}}</div>
-        </div>
+<section class="board">
+    <div class="row" [ngStyle]="{
+        'height' : 'calc(75vmin/' + size + ')'
+      }" *ngFor="let i of numbers">
+      <div class="cell" [ngStyle]="{
+          'width' : 'calc(100%/' + size + ')'
+        }" *ngFor="let j of numbers" (click)="onCellClick(i, j)">
+
+        <i [ngStyle]="{
+            'top' : 'calc(50% - (30vmin/' + size + '))',
+            'font-size' : 'calc(60vmin / ' + size + ')'
+          }" class="material-icons player_move">
+          {{icons[i][j]}}
+        </i>
       </div>
-</div>
+    </div>
+</section>

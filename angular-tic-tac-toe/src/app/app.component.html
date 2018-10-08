@@ -1,8 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}
-  </h1>
-  <app-board [size]=3></app-board>
-</div>
+<section id="title">
+  <div id="title_inner">
+    <div id="heading_container">
+      <h2 id=title_heading>{{title}}</h2>
+    </div>
+    <div id="logo_container">
+      <img id="title_logo" href="/" src="../assets/tic-tac-toe-game-icon-256.png">
+    </div>
+  </div>
+</section>
+
+<section id="body">
+  <div class="board">
+    <div style="text-align:center">
+      <app-board [size]=3></app-board>
+      <app-board [size]=8></app-board>
+      <app-board [size]=5></app-board>
+    </div>
+  </div>
+
+  <div class="control-panel"></div>
+</section>
+
+<section id="footer">
+  <div id="license"></div>
+  <div id="about"></div>
+</section>
 
